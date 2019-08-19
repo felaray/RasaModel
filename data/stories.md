@@ -1,4 +1,4 @@
-## happy path
+<!-- ## happy path
 * greet
   - utter_greet
 * mood_great
@@ -24,4 +24,4 @@
 
 ## say goodbye
 * goodbye
-  - utter_goodbye
+  - utter_goodbye -->

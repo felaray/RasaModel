@@ -1,13 +1,11 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: "zh"
-
-
-pipeline: 
-- name: "tokenizer_jieba"
-- name: "ner_crf"
-- name: "intent_featurizer_count_vectors"
-- name: "intent_classifier_tensorflow_embedding"
+language: zh
+pipeline:
+- name: "JiebaTokenizer"
+- name: "CRFEntityExtractor"
+- name: "CountVectorsFeaturizer"
+- name: "EmbeddingIntentClassifier"
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
