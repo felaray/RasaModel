@@ -5,11 +5,16 @@ pipeline:
 - name: "JiebaTokenizer"
 - name: "CRFEntityExtractor"
 - name: "CountVectorsFeaturizer"
-- name: "EmbeddingIntentClassifier"
+- name: "intent_classifier_tensorflow_embedding"
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
+  - name: FallbackPolicy
+    nlu_threshold: 0.4
+    core_threshold: 0.3
+    fallback_action_name: "utter_unknown"
   - name: MemoizationPolicy
   - name: KerasPolicy
   - name: MappingPolicy
+

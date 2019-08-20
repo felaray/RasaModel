@@ -1,27 +1,27 @@
-<!-- ## happy path
+## search and buy 
 * greet
-  - utter_greet
-* mood_great
-  - utter_happy
-
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
+  - utter_ask
+* search
+  - utter_check
 * affirm
-  - utter_happy
-
-## sad path 2
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
   - utter_goodbye
 
-## say goodbye
-* goodbye
-  - utter_goodbye -->
+## search and retry
+* greet
+  - utter_ask
+* search
+  - utter_check
+* deny
+  - utter_ask
+
+## search 
+* search
+  - utter_check
+* deny
+  - utter_ask
+
+  ## search 
+* search
+  - utter_check
+* affirm
+  - utter_goodbye

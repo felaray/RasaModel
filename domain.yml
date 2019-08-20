@@ -1,46 +1,35 @@
 intents:
-  - greet
-  - search
-  - qna
-  - support
-  - end
-
+- greet
+- search
+- buy
+- affirm
+- goodbye
+- deny
+- unknown
 entities:
-  - date
-  - action
-  - question
-  - greet
-  - item
-  - location
-
-  # - goodbye
-  # - affirm
-  # - deny
-  # - mood_great
-  # - mood_unhappy
-  # - weather
-  # - buy
-
-# actions:
-# - utter_greet
-# - utter_cheer_up
-# - utter_did_that_help
-# - utter_happy
-# - utter_goodbye
-
-# templates:
-#   utter_greet:
-#   - text: "Hey! How are you?"
-
-#   utter_cheer_up:
-#   - text: "Here is something to cheer you up:"
-#     image: "https://i.imgur.com/nGF1K8f.jpg"
-
-#   utter_did_that_help:
-#   - text: "Did that help you?"
-
-#   utter_happy:
-#   - text: "Great carry on!"
-
-#   utter_goodbye:
-#   - text: "Bye"
+- adv
+- time
+- type
+- drink
+- food
+slots:
+  food:
+    type: text
+templates:
+  utter_ask:
+  - text: 你需要什麼?
+  utter_check:
+  - text: 你要找的是這個對嗎?
+  utter_affirm:
+  - text: 很高興幫助您!
+  utter_unknown:
+  - text: 聽不懂呢!
+actions:
+- utter_happy
+- utter_goodbye
+- utter_greet
+- utter_did_that_help
+- utter_cheer_up
+- utter_ask
+- utter_check
+- utter_unknown
